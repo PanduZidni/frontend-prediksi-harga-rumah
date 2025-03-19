@@ -1,0 +1,144 @@
+/* Wrapper utama agar konten tersusun secara vertikal */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Susun elemen secara vertikal */
+    align-items: center;
+    margin-top: 70px; /* Sesuaikan dengan tinggi header */
+    margin-bottom: 50px; /* Sesuaikan dengan tinggi footer */
+    width: 100%; /* Lebar penuh */
+}
+  
+.nama-table {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+/* Styling tabel agar berada di bawah container prediksi */
+/* Wrapper tabel agar dapat di-scroll jika terlalu lebar */
+.table-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    overflow-x: auto; /* Menambahkan scroll horizontal jika tabel terlalu besar */
+}
+
+/* Tabel */
+.house-table {
+    width: 1000px;
+    max-width: 1000px;
+    border-collapse: collapse;
+    background-color: white;
+    table-layout: auto; /* Memungkinkan kolom menyesuaikan ukuran konten */
+}
+
+.house-table th, .house-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    word-wrap: break-word; /* Memastikan teks tetap rapi */
+    white-space: normal; /* Izinkan teks turun ke baris berikutnya */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px; /* Batasi lebar maksimum kolom */
+}
+
+/* Warna header tabel */
+.house-table th {
+    background-color: #2563eb;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Warna zebra stripe */
+.house-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Pagination */
+/* Pagination */
+.pagination {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagination button {
+    padding: 6px 12px;
+    border: none;
+    background-color: #2563eb;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.pagination button:hover {
+    background-color: #1e40af;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Styling untuk input halaman pagination */
+.page-input-container {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.page-input-container input {
+    width: 60px;
+    padding: 5px;
+    border: 2px solid #2563eb;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Styling untuk teks "Page X of Y" */
+.page-info {
+    background-color: #2563eb; /* Warna biru */
+    color: white; /* Warna teks putih */
+    padding: 5px 12px; /* Padding agar lebih rapi */
+    border-radius: 5px; /* Membuat sudut membulat */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.page-input-container input:focus {
+    border-color: #1e40af;
+    box-shadow: 0px 0px 5px rgba(37, 99, 235, 0.7);
+}
+
+.page-input-container button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #2563eb;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.page-input-container button:hover {
+    background-color: #1e40af;
+}
+
+.page-input-container button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
