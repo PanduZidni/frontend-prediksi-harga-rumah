@@ -17,7 +17,7 @@ const PredictionForm = ({ setPrediction }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://127.0.0.1:5000/predict", formData);
+      const response = await axios.post("https://flask-prediksi.onrender.com/predict", formData);
       setPrediction(response.data.predicted_price * 1000000);
 
     } catch (error) {
